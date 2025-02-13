@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Suggestions</title>
+    <link rel="stylesheet" href="./css/recipe.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Recipe Suggestions</h1>
+    </nav>
+
+    <div class="container">
+        <div class="ingredients-box">
+            <h2>Select Ingredients:</h2>
+            <div class="ingredients">
+                <label><input type="checkbox" value="rice"> Rice</label>
+                <label><input type="checkbox" value="chicken"> Chicken</label>
+                <label><input type="checkbox" value="tomato"> Tomato</label>
+                <label><input type="checkbox" value="beef"> Beef</label>
+                <label><input type="checkbox" value="pasta"> Pasta</label>
+                <label><input type="checkbox" value="cheese"> Cheese</label>
+                <label><input type="checkbox" value="onion"> Onion</label>
+                <label><input type="checkbox" value="garlic"> Garlic</label>
+                <label><input type="checkbox" value="fish"> Fish</label>
+                <label><input type="checkbox" value="potato"> Potato</label>
+                <label><input type="checkbox" value="egg"> Egg</label>
+                <label><input type="checkbox" value="flour"> Flour</label>
+            </div>
+            <button id="suggest-btn">Get Recipes</button>
+            <button id="clear-btn">Clear Filters</button>
+        </div>
+
+        <div class="filters">
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search recipes...">
+                <button id="search-btn">Search</button>
+            </div>
+            <select id="cuisine-filter">
+                <option value="all">All Cuisines</option>
+                <option value="indian">Indian</option>
+                <option value="italian">Italian</option>
+                <option value="mexican">Mexican</option>
+                <option value="chinese">Chinese</option>
+                <option value="american">American</option>
+                <option value="middle-eastern">Middle Eastern</option>
+                <option value="dessert">Dessert</option>
+            </select>
+        </div>
+
+        <div class="recipes" id="recipes">
+            <!-- Recipe cards will be generated here -->
+        </div>
+
+        <div class="pagination" id="pagination">
+            <!-- Pagination buttons will be generated here -->
+        </div>
+    </div>
+
+    <!-- Modal for detailed recipe view -->
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-ingredients"></p>
+        </div>
+    </div>
+
+    <script src="recipe.js"></script>
+</body>
+</html>
